@@ -29,9 +29,18 @@ namespace TemperatureConverter
         {
             var input = textBox.Text;
             var fahrenheit = double.Parse(input);
-            var celsius = Math.Round((fahrenheit - 32) / 1.8,2);
+            var celsius = Math.Round((fahrenheit - 32) / 1.8, 2);
             var output = Convert.ToString(celsius);
             textBox.Text = output + " degrees Celsius";
+        }
+
+        private void ConvertToFahrenheit(object sender, RoutedEventArgs e)
+        {
+            var input = textBox.Text;
+            var celsius = double.Parse(input);
+            var fahrenheit = Math.Round(celsius * 1.8 + 32, 2);
+            var output = Convert.ToString(fahrenheit);
+            textBox.Text = output + " degrees Fahrenheit";
         }
     }
 }
