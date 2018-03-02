@@ -30,7 +30,6 @@ namespace TemperatureConverter
             var kelvin = (double) slider.Value;
             var celsius = kelvin - 273.15;
             var fahrenheit = Math.Round(celsius * 1.8 + 32, 2);
-            textBoxFahrenheit.Text = Convert.ToString(fahrenheit);
         }
     }
 }
