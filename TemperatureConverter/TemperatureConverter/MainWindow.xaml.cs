@@ -62,7 +62,6 @@ namespace TemperatureConverter
             var fahrenheit = Math.Round(celsius * 1.8 + 32, 2);
             textBoxCelsius.Text = Convert.ToString(celsius);
             textBoxFahrenheit.Text = Convert.ToString(fahrenheit);
-            textBoxKelvin.Text = Convert.ToString(kelvin);
         }
     }
 }
