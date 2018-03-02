@@ -25,11 +25,5 @@ namespace TemperatureConverter
             InitializeComponent();
         }
 
-        private void SliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            var kelvin = (double) slider.Value;
-            var celsius = kelvin - 273.15;
-            var fahrenheit = Math.Round(celsius * 1.8 + 32, 2);
-        }
     }
 }
