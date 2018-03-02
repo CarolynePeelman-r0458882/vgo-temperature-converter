@@ -41,7 +41,7 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Celsius" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" x:Name="textBoxCelsius" Style="{StaticResource boxStyle}"/>
-            <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Content="Convert to Fahrenheit" Click="ConvertToFahrenheit" Style="{StaticResource buttonStyle}"/>
+            <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Content="Convert Celsius" Click="ConvertCelsius" Style="{StaticResource buttonStyle}"/>
         </Grid>
 
         <Grid>
