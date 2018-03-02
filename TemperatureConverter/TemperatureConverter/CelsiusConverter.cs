@@ -1,4 +1,6 @@
-using Systems.Windows.Data;
+using System;
+using System.Globalization;
+using System.Windows.Data;
 
 namespace TemperatureConverter
 {

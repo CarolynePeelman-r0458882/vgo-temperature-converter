@@ -31,6 +31,7 @@
     </Window.Resources>
 
     <StackPanel>
+      
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -40,7 +41,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Celsius" Style="{StaticResource labelStyle}"/>
-            <TextBox Grid.Row="1" Text="{Binding ElementName=slider, Path=Value, UpdateSourceTrigger=PropertyChanged, Converter=celsiusConverter}" x:Name="textBoxCelsius" Style="{StaticResource boxStyle}"/>
+            <TextBox Grid.Row="1" Text="{Binding ElementName=slider, Path=Value, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource celsiusConverter}}" x:Name="textBoxCelsius" Style="{StaticResource boxStyle}"/>
         </Grid>
 
         <Grid>
