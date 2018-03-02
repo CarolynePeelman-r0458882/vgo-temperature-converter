@@ -1,20 +1,23 @@
 using Systems.Windows.Data;
 
-public class CelsiusConverter : IValueConverter
+namespace TemperatureConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public class CelsiusConverter : IValueConverter
     {
-        var kelvin = (double)value;
-        var celsius = kelvin - 273.15;
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var kelvin = (double)value;
+            var celsius = kelvin - 273.15;
 
-        return celsius.ToString();
-    }
+            return celsius.ToString();
+        }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        var celsius = double.Parse((string)value);
-        var kelvin = celsius + 273.15;
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var celsius = double.Parse((string)value);
+            var kelvin = celsius + 273.15;
 
-        return kelvin;
+            return kelvin;
+        }
     }
 }
