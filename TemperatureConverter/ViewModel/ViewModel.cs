@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace View
+namespace ViewModel
 {
     public class ConverterViewModel : INotifyPropertyChanged
     {

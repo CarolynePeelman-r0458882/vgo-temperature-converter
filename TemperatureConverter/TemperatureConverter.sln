@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "TemperatureConverter\View.csproj", "{302AF172-F09A-4660-BEFD-D38A1E4F6B22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{1DEF6B0D-B8D3-452B-97C1-B9386A320780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{8F60CD48-BA97-4F0E-A32B-75906CD68744}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{302AF172-F09A-4660-BEFD-D38A1E4F6B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{302AF172-F09A-4660-BEFD-D38A1E4F6B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{302AF172-F09A-4660-BEFD-D38A1E4F6B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEF6B0D-B8D3-452B-97C1-B9386A320780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEF6B0D-B8D3-452B-97C1-B9386A320780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEF6B0D-B8D3-452B-97C1-B9386A320780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEF6B0D-B8D3-452B-97C1-B9386A320780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F60CD48-BA97-4F0E-A32B-75906CD68744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F60CD48-BA97-4F0E-A32B-75906CD68744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F60CD48-BA97-4F0E-A32B-75906CD68744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F60CD48-BA97-4F0E-A32B-75906CD68744}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
