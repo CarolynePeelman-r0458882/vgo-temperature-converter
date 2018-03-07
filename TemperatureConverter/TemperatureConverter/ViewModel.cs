@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace TemperatureConverter
+namespace View
 {
     public class ConverterViewModel : INotifyPropertyChanged
     {
