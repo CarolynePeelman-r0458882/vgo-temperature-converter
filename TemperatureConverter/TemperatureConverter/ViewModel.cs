@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace View
@@ -34,6 +35,16 @@ namespace View
         public TemperatureScaleViewModel Celsius { get; }
 
         public TemperatureScaleViewModel Fahrenheit { get; }
+
+        public IEnumerable<TemperatureScaleViewModel> Scales
+        {
+            get
+            {
+                yield return Celsius;
+                yield return Fahrenheit;
+                yield return Kelvin;
+            }
+        }
     }
 
     public class TemperatureScaleViewModel : INotifyPropertyChanged
