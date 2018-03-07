@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
 namespace Cells
 {
@@ -11,7 +12,7 @@ namespace Cells
             this.contents = initialContents;
         }
 
-        public T Value
+        public virtual T Value
         {
             get
             {
@@ -21,11 +22,47 @@ namespace Cells
             {
                 this.contents = value;
 
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(value));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Value)));
             }
+        }
+
+        public Cell<U> Derive<U>(Func<T, U> transformer, Func<U, T> untransformer)
+        {
+            return new Derived<T, U>(this, transformer, untransformer);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+    }
+
+    public class Derived<IN, OUT> : Cell<OUT>
+    {
+        private readonly Cell<IN> dependency;
+
+        private readonly Func<IN, OUT> transformer;
+
+        private readonly Func<OUT, IN> untransformer;
+
+        public Derived(Cell<IN> dependency, Func<IN, OUT> transformer, Func<OUT, IN> untransformer)
+            : base(transformer(dependency.Value))
+        {
+            this.dependency = dependency;
+            this.transformer = transformer;
+            this.untransformer = untransformer;
+
+            this.dependency.PropertyChanged += (sender, args) => base.Value = transformer(dependency.Value);
+        }
+
+        public override OUT Value
+        {
+            get
+            {
+                return base.Value;
+            }
+            set
+            {
+                this.dependency.Value = untransformer(value);
+            }
+        }
     }
 }
