@@ -26,6 +26,12 @@ namespace TemperatureConverter
         public event PropertyChangedEventHandler PropertyChanged;
         private double temperatureInKelvin;
 
+        public MainWindow()
+        {
+            InitializeComponent();
+            this.DataContext = this;
+        }
+
         public double TemperatureInKelvin
         {
             get
@@ -37,11 +43,6 @@ namespace TemperatureConverter
                 temperatureInKelvin = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TemperatureInKelvin)));
             }
-        }
-
-        public MainWindow()
-        {
-            InitializeComponent();
         }
 
     }
